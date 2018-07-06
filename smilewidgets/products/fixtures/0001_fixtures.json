@@ -1,0 +1,50 @@
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "name": "Big Widget",
+        "code": "big_widget",
+        "price": 100000
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "name": "Small Widget",
+        "code": "sm_widget",
+        "price": 9900
+    }
+},
+{
+    "model": "products.giftcard",
+    "pk": 2,
+    "fields": {
+        "code": "10OFF",
+        "amount": 1000,
+        "date_start": "2018-07-01",
+        "date_end": null
+    }
+},
+{
+    "model": "products.giftcard",
+    "pk": 3,
+    "fields": {
+        "code": "50OFF",
+        "amount": 5000,
+        "date_start": "2018-07-01",
+        "date_end": null
+    }
+},
+{
+    "model": "products.giftcard",
+    "pk": 4,
+    "fields": {
+        "code": "250OFF",
+        "amount": 25000,
+        "date_start": "2018-12-01",
+        "date_end": "2019-01-01"
+    }
+}
+]
