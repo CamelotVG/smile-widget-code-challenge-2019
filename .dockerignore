@@ -1,0 +1,8 @@
+.git
+
+# MacOS
+.DS_Store
+
+# Python
+*.pyc
+.env
