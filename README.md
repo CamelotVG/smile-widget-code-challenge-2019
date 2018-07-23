@@ -19,7 +19,7 @@ The Smile Widget Company currently sells two types of smile widgets: a Big Widge
   * `>>> python manage.py loaddata 0001_fixtures.json`
 
 ### Technical Requirements
-* We currently have to products with the following prices:
+* We currently have two products with the following prices:
     * Big Widget - $1000
     * Small Widget - $99
 * These products, along with existing gift cards are already setup in the database.  Study the existing models and initial data.
