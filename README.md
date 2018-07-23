@@ -35,9 +35,8 @@ The Smile Widget Company currently sells two types of smile widgets: a Big Widge
     * `"productCode"`
     * `"date"`
     * `"giftCardCode"`
-* Update this README file with instructions on how to run and access your price calculator.
 * Create a pull request with your changes.
 
 ### Additional Information
-* Please use Django Rest Framework or a Python web framework of your choice to create the endpoint.
+* Please use Django Rest Framework or a Python HTTP framework of your choice to create the endpoint.
 * Just as a general guideline, we've designed this exercise to take less than 4 hours.
