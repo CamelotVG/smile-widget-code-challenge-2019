@@ -4,13 +4,13 @@ The Smile Widget Company currently sells two types of smile widgets: a Big Widge
 
 ## Setup with Docker
 1. Install Docker (https://docs.docker.com/install/)
-2. Clone this repository.
+2. Fork this repository.
 3. `>>> docker-compose up --build`
 
 ## Setup without Docker
 1. Install Python (>3.4)
 2. Install postgres.  By default the Django app will connect to the database named 'postgres'.  See `settings.DATABASES`.
-3. Clone this repository.
+3. Fork this repository, then clone your repository locally.
 4. Install requirements.
   * `>>> pip install -r requirements.txt`
 5. Run migrations.
@@ -35,7 +35,7 @@ The Smile Widget Company currently sells two types of smile widgets: a Big Widge
     * `"productCode"`
     * `"date"`
     * `"giftCardCode"`
-* Create a pull request with your changes.
+* Make all of your changes in a new feature branch and submit a pull request to _your own forked repo_.
 
 ### Additional Information
 * Please use Django Rest Framework or a Python HTTP framework of your choice to create the endpoint.
