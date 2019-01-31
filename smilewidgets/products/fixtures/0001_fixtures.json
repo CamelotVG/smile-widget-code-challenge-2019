@@ -46,5 +46,45 @@
         "date_start": "2018-12-01",
         "date_end": "2019-01-01"
     }
+},
+{
+    "model": "products.productprice",
+    "pk": 1,
+    "fields": {
+        "start_date": "2019-01-01",
+        "end_date": "2019-12-31",
+        "price": 120000,
+        "product": 1
+    }
+},
+{
+    "model": "products.productprice",
+    "pk": 2,
+    "fields": {
+        "start_date": "2019-01-01",
+        "end_date": "2019-12-31",
+        "price": 12500,
+        "product": 2
+    }
+},
+{
+    "model": "products.productprice",
+    "pk": 3,
+    "fields": {
+        "start_date": "2019-11-23",
+        "end_date": "2019-11-25",
+        "price": 80000,
+        "product": 1
+    }
+},
+{
+    "model": "products.productprice",
+    "pk": 4,
+    "fields": {
+        "start_date": "2019-11-23",
+        "end_date": "2019-11-25",
+        "price": 0,
+        "product": 2
+    }
 }
 ]
