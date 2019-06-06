@@ -35,7 +35,10 @@ The Smile Widget Company currently sells two types of smile widgets: a Big Widge
     * `"productCode"`
     * `"date"`
     * `"giftCardCode"`
+* Take care to ensure your solution is well designed and layered (ex: clean separation of view logic vs. business logic). 
 * Make all of your changes in a new feature branch and submit a pull request to _your own forked repo_.
+* Include unit tests as a part of your solution.
+* If you find it necessary to log output, we request you use a python logger instance as opposed to print statements. 
 
 ### Additional Information
 * Please use Django Rest Framework or a Python HTTP framework of your choice to create the endpoint.
