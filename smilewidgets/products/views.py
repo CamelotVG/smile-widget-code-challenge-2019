@@ -1,16 +1,16 @@
 from datetime import datetime, timedelta
 from rest_framework.response import Response
-from rest_framework.generics import RetrieveAPIView
+from rest_framework.generics import CreateAPIView
 from .models import ProductPrice, GiftCard
 from django.shortcuts import get_object_or_404
 
 
-class ProductPriceView(RetrieveAPIView):
+class ProductPriceView(CreateAPIView):
 
-    def get(self, request, *args, **kwargs):
-        product_code = request.query_params.get("productCode")
-        date = request.query_params.get("date")
-        gift_card_code = request.query_params.get("giftCardCode", None)
+    def post(self, request, *args, **kwargs):
+        product_code = request.data.get("productCode")
+        date = request.data.get("date")
+        gift_card_code = request.data.get("giftCardCode", None)
         req_date = datetime.strptime(date, "%Y-%m-%d")
         black_friday_start = datetime(2018, 11, 23)
 
@@ -27,6 +27,5 @@ class ProductPriceView(RetrieveAPIView):
             gift = GiftCard.objects.filter(code=gift_card_code, date_start__lte=req_date)
             if gift:
                 discount_amount = gift.first().amount
-        print(price, discount_amount)
         res = "$" + str((price - discount_amount)/100)
         return Response({"result": {"product price": res}}, status=200)

@@ -3,5 +3,5 @@ from django.urls import path
 from .views import ProductPriceView
 
 urlpatterns = [
-    path('get-price/', ProductPriceView.as_view()),
+    path('get-price/', ProductPriceView.as_view(), name="get-price"),
 ]
