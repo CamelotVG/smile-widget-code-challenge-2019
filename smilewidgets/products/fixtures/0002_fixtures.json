@@ -1,0 +1,102 @@
+[
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Big Widget",
+      "code": "big_widget"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Small Widget",
+      "code": "sm_widget"
+    }
+  },
+  {
+    "model": "products.giftcard",
+    "pk": 2,
+    "fields": {
+      "code": "10OFF",
+      "amount": 1000,
+      "date_start": "2018-07-01",
+      "date_end": null
+    }
+  },
+  {
+    "model": "products.giftcard",
+    "pk": 3,
+    "fields": {
+      "code": "50OFF",
+      "amount": 5000,
+      "date_start": "2018-07-01",
+      "date_end": null
+    }
+  },
+  {
+    "model": "products.giftcard",
+    "pk": 4,
+    "fields": {
+      "code": "250OFF",
+      "amount": 25000,
+      "date_start": "2018-12-01",
+      "date_end": "2019-01-01"
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 1,
+    "fields": {
+      "name": "default",
+      "price": 100000,
+      "product": 1
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 2,
+    "fields": {
+      "name": "default",
+      "price": 9900,
+      "product": 2
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 3,
+    "fields": {
+      "name": "black_friday",
+      "price": 80000,
+      "product": 1
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 4,
+    "fields": {
+      "name": "black_friday",
+      "price": 0,
+      "product": 2
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 5,
+    "fields": {
+      "name": "from2019",
+      "price": 120000,
+      "product": 1
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 6,
+    "fields": {
+      "name": "from2019",
+      "price": 12500,
+      "product": 2
+    }
+  }
+]
