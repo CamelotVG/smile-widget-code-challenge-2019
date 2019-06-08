@@ -1,50 +1,104 @@
 [
-{
+  {
     "model": "products.product",
     "pk": 1,
     "fields": {
-        "name": "Big Widget",
-        "code": "big_widget",
-        "price": 100000
+      "name": "Big Widget",
+      "code": "big_widget",
+      "price": 100000
     }
-},
-{
+  },
+  {
     "model": "products.product",
     "pk": 2,
     "fields": {
-        "name": "Small Widget",
-        "code": "sm_widget",
-        "price": 9900
+      "name": "Small Widget",
+      "code": "sm_widget",
+      "price": 9900
     }
-},
-{
+  },
+  {
     "model": "products.giftcard",
     "pk": 2,
     "fields": {
-        "code": "10OFF",
-        "amount": 1000,
-        "date_start": "2018-07-01",
-        "date_end": null
+      "code": "10OFF",
+      "amount": 1000,
+      "date_start": "2018-07-01",
+      "date_end": null
     }
-},
-{
+  },
+  {
     "model": "products.giftcard",
     "pk": 3,
     "fields": {
-        "code": "50OFF",
-        "amount": 5000,
-        "date_start": "2018-07-01",
-        "date_end": null
+      "code": "50OFF",
+      "amount": 5000,
+      "date_start": "2018-07-01",
+      "date_end": null
     }
-},
-{
+  },
+  {
     "model": "products.giftcard",
     "pk": 4,
     "fields": {
-        "code": "250OFF",
-        "amount": 25000,
-        "date_start": "2018-12-01",
-        "date_end": "2019-01-01"
+      "code": "250OFF",
+      "amount": 25000,
+      "date_start": "2018-12-01",
+      "date_end": "2019-01-01"
     }
-}
+  },
+  {
+    "model": "products.productprice",
+    "pk": 1,
+    "fields": {
+      "name": "Standard",
+      "code": "big_widget",
+      "price": 100000
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 2,
+    "fields": {
+      "name": "Standard",
+      "code": "sm_widget",
+      "price": 9900
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 3,
+    "fields": {
+      "name": "Black Friday",
+      "code": "big_widget",
+      "price": 80000
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 4,
+    "fields": {
+      "name": "Black Friday",
+      "code": "sm_widget",
+      "price": 0
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 5,
+    "fields": {
+      "name": "2019",
+      "code": "big_widget",
+      "price": 120000
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 6,
+    "fields": {
+      "name": "2019",
+      "code": "sm_widget",
+      "price": 12500
+    }
+  }
 ]
