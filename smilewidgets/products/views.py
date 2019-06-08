@@ -19,7 +19,10 @@ def product_price(request):
         payload = json.loads(request.body)
         productCode = payload['productCode']
         date = datetime.strptime(payload['date'], "%Y-%m-%d")
-        giftCardCode = payload['giftCardCode']
+        try:
+            giftCardCode = payload['giftCardCode']
+        except:
+            giftCardCode = None
         giftCardAmount = 0
 
         # check if within black friday dates
