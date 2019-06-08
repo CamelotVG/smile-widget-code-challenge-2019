@@ -24,31 +24,34 @@ def product_price(request):
 
         # check if within black friday dates
         if is_black_friday(date):
-            product = ProductPrice.objects.filter(name="Black Friday", code=productCode)
+            product = ProductPrice.objects.filter(name="Black Friday", productCode=productCode).first()
         # check if 2019 prices apply
         elif date.strftime("%Y") == '2019':
-            product = ProductPrice.objects.filter(name="2019", code=productCode)
+            product = ProductPrice.objects.filter(name="2019", productCode=productCode).first()
+        # original pricing
         else:
-            product = ProductPrice.objects.filter(name="Standard", code=productCode)
+            product = ProductPrice.objects.filter(name="Standard", productCode=productCode).first()
 
         if giftCardCode is not None:
             # get amount for gift card if is after start date
             giftCard = GiftCard.objects.filter(code=giftCardCode, date_start__lte=date).first()
-            # check if there is an end date, then check if we passed it
-            if giftCard.date_end:
-                if giftCard.date_end >= date.date():
-                    giftCardAmount = giftCard.amount
-            else:
-                giftCardAmount = giftCard.amount
 
             if giftCard is not None:
-                # don't let price be negative
-                price = max(product.price - giftCardAmount, 0)
+                # check if there is an end date, then check if we passed it
+                if giftCard.date_end is None or giftCard.date_end >= date.date():
+                    giftCardAmount = giftCard.amount
 
-        # try:
-        response = json.dumps([{
-            'Product Price': price
-        }])
-        # except:
-        #     response = json.dumps([{'Error': 'Error getting price'}])
+        # don't let price be negative
+        price = max(product.price - giftCardAmount, 0)
+
+        # setup response format
+        try:
+            response = json.dumps([{
+                'Product': product.productCode,
+                'Type': product.name,
+                'Price': price
+            }])
+        except:
+            response = json.dumps([{'Error': 'Error getting price'}])
+        # return json
         return HttpResponse(response, content_type='text/json')
