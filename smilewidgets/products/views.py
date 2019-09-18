@@ -11,4 +11,8 @@ def get_price(request):
     serializer = RequestPriceSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
     data = serializer.validated_data
-    return Response({'price': data['productCode'].price})
+    product = data['productCode']
+    date = data['date']
+    gift_cad = data.get('giftCardCode')
+    price = product.calculate_price_for_date(date, gift_cad)
+    return Response({'price': price})
