@@ -1,0 +1,46 @@
+[
+{
+    "model": "products.productprice",
+    "pk": 1,
+    "fields": {
+        "name": "Black Friday",
+        "date_start": "2019-11-23",
+        "date_end": "2019-11-25",
+        "product": 1,
+        "price": 80000
+    }
+},
+{
+    "model": "products.productprice",
+    "pk": 2,
+    "fields": {
+        "name": "Black Friday",
+        "date_start": "2019-11-23",
+        "date_end": "2019-11-25",
+        "product": 2,
+        "price": 0
+    }
+},
+{
+    "model": "products.productprice",
+    "pk": 3,
+    "fields": {
+        "name": "2019 Prices",
+        "date_start": "2019-01-01",
+        "date_end": "2019-12-31",
+        "product": 1,
+        "price": 120000
+    }
+},
+{
+    "model": "products.productprice",
+    "pk": 4,
+    "fields": {
+        "name": "2019 Prices",
+        "date_start": "2019-01-01",
+        "date_end": "2019-12-31",
+        "product": 2,
+        "price": 12500
+    }
+}
+]
