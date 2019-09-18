@@ -14,11 +14,11 @@ class RequestPriceSerializer(serializers.Serializer):
             product = Product.objects.get(code=code)
             return product
         except Product.DoesNotExist:
-            raise ValidationError("Product with code '{}' doesn't exist".format(code))
+            raise ValidationError(f"Product with code '{code}' doesn't exist")
 
     def validate_giftCardCode(self, code):
         try:
             gift_card = GiftCard.objects.get(code=code)
             return gift_card
         except GiftCard.DoesNotExist:
-            raise ValidationError("Gift card with code '{}' doesn't exist".format(code))
+            raise ValidationError(f"Gift card with code '{code}' doesn't exist")

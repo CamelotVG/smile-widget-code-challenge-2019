@@ -13,6 +13,6 @@ def get_price(request):
     data = serializer.validated_data
     product = data['productCode']
     date = data['date']
-    gift_cad = data.get('giftCardCode')
-    price = product.calculate_price_for_date(date, gift_cad)
+    gift_card = data.get('giftCardCode')
+    price = product.calculate_price_for_date(date, gift_card)
     return Response({'price': price})
