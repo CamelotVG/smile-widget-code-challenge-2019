@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from products.views import ProductPriceView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/get-price/', ProductPriceView.as_view(), name='get_price'),
 ]

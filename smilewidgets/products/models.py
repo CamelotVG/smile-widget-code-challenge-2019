@@ -22,3 +22,14 @@ class GiftCard(models.Model):
     @property
     def formatted_amount(self):
         return '${0:.2f}'.format(self.amount / 100)
+
+
+class ProductPrice(models.Model):
+    event_name = models.CharField(max_length=40, help_text='Name of event')
+    date_start = models.DateField()
+    date_end = models.DateField(blank=True, null=True)
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, verbose_name='Product',
+        related_name='product_prices'
+    )
+    price = models.PositiveIntegerField(help_text='Special price of product in cents')
