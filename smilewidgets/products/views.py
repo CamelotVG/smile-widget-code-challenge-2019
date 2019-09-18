@@ -20,7 +20,7 @@ class ProductPriceView(APIView):
             raise ValidationError('Incorrect date format, should be YYYY-MM-DD.')
 
         product = Product.objects.filter(code=product_code)
-        if not product:
+        if not product.exists():
             raise NotFound(detail='Product not found.')
 
         product_data = ProductSerializer(product.first()).data
