@@ -26,11 +26,11 @@ class ProductPriceView(APIView):
         product_data = ProductSerializer(product.first()).data
 
         product_price = ProductPrice.objects.filter(
-            product=product_data['id'], date_start__lt=date,
+            product=product_data['id'], date_start__lte=date,
         ).order_by('-date_start')
 
-        if product_price.filter(date_end__gt=date):
-            product_price = product_price.filter(date_end__gt=date).first()
+        if product_price.filter(date_end__gte=date):
+            product_price = product_price.filter(date_end__gte=date).first()
         else:
             product_price = product_price.filter(date_end=None).first()
 
