@@ -12,4 +12,5 @@ sleep 10
 
 python smilewidgets/manage.py migrate --noinput
 python smilewidgets/manage.py loaddata 0001_fixtures.json
+python smilewidgets/manage.py loaddata 0002_product_price_fixtures.json
 exec python smilewidgets/manage.py runserver 0.0.0.0:8000

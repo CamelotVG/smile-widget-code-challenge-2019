@@ -1,0 +1,42 @@
+[
+  {
+    "model": "products.productprice",
+    "pk": 1,
+    "fields": {
+      "date_start": "2019-11-23",
+      "date_end": "2019-11-25",
+      "new_price": 80000,
+      "product": 1
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 2,
+    "fields": {
+      "date_start": "2019-11-23",
+      "date_end": "2019-11-25",
+      "new_price": 0,
+      "product": 2
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 3,
+    "fields": {
+      "date_start": "2019-01-01",
+      "date_end": null,
+      "new_price": 120000,
+      "product": 1
+    }
+  },
+  {
+    "model": "products.productprice",
+    "pk": 4,
+    "fields": {
+      "date_start": "2019-01-01",
+      "date_end": null,
+      "new_price": 12500,
+      "product": 2
+    }
+  }
+]
